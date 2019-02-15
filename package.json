@@ -1,0 +1,15 @@
+{
+  "name": "reactdecal-hw01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js_builtins.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -o"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
