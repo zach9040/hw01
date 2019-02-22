@@ -78,6 +78,9 @@ builtins.search = function(sourceString, searchString) {
 // ex. builtins.reverse([123]) -> [123]
 
 builtins.reverse = function(arr) {
-  let next = arr.unshift();
-  return builtins.reverse(arr).concat(next);
+  var copy = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    copy.push(arr[i]);
+  }
+  return copy;
 };
