@@ -21,10 +21,23 @@ window.builtins = {};
 
 builtins.trim = function(str) {
   let newStr = "";
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] !== " ") {
-      newStr += str[i];
+  var index1, index2;
+  var check = true;
+  for (let i = str.length; i > 0 ; i--) {
+    if (str[i] !== " " && check === true) {
+      index1 = i;
+      check === false;
     }
+  }
+  check = true;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " " && check === true) {
+      index2 = i;
+      check === false;
+    }
+  }
+  for (let i = index1; i <= index2; i ++) {
+    newStr += str[i];
   }
   return newStr;
 };
