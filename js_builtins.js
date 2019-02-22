@@ -45,7 +45,7 @@ builtins.trim = function(str) {
 // ex. builtins.search('Horizons', 'h') -> false
 
 builtins.search = function(sourceString, searchString) {
-  if (searchString.indexOf(sourceString)) {
+  if (sourceString.indexOf(searchString) >= 0) {
     return true;
   } else {
     return false;
